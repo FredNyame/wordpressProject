@@ -25,12 +25,18 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
     <div class="small-info-header">
-        <div class="container">
-            <div class="col-md-6">
-                <div class="col-md-6">Text</div>
-                <div class="col-md-6">Text</div>
-            </div> 
-            <div class="col-md-6">Text</div>        
+        <div class="container top-bar">
+                <div class="col-md-6 top-bar-middle" >
+                    <div class="col-md-6">
+                        <img src="http://localhost/Joshua/wp-content/uploads/2018/06/email.png" class="top-bar-img"><p class="top-bar-p">email@example.com</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="http://localhost/Joshua/wp-content/uploads/2018/06/telephone.png" class="top-bar-img"><p class="top-bar-p">+1800-222-4444</p>
+                    </div>
+                </div> 
+                <div class="col-md-6" id="top-bar-right">
+                    <img src="http://localhost/Joshua/wp-content/uploads/2018/06/add.png" class="top-bar-img"><p class="top-bar-p">319 Broadway Unit C, L9W 1L4, Orangeville, Ontario Canada</p>
+                </div>
         </div>
     </div>
 	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
@@ -75,10 +81,13 @@
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo get_theme_mod( 'header_banner_title_setting' );
                     }else{
-                        echo 'Wordpress + Bootstrap';
+                        echo 'We are here to help you move <span class="header-bold">FASTER</span> and grow <span class="header-bold">BIGGER</span>';
                     }
                     ?>
                 </h1>
+                <div class="container-banner-button">
+                    <button id="banner-button"><a href="">GET FREE QUOTE</a></button>
+                </div>
                 <p>
                     <?php
                     if(get_theme_mod( 'header_banner_tagline_setting' )){

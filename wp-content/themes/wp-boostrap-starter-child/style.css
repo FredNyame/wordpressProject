@@ -9,6 +9,9 @@
  Text Domain:  wp-boostrap-starter-child
 */
 
+html,body{
+    box-sizing: border-box;
+}
 /* font*/
 @font-face{
   font-family: Walsheim;
@@ -29,10 +32,27 @@
   font-weight: 600;
 }
 /*General*/
+.container{
+  padding-right: 5px;
+  padding-left: 5px;
+}
 .col-lg-8{
-    -ms-flex: 0 0 66.666667%;
     flex: 0 0 100%;
     max-width: 100%;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5,
+ .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, 
+ .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, 
+ .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, 
+ .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, 
+ .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, 
+ .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
+ .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, 
+ .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, 
+ .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+.col-lg-8{
+    padding-right: 10px;
+    padding-left: 10px;
 }
 #content.site-content {
     padding-bottom: 0;
@@ -52,7 +72,13 @@ a:hover{
 }
 ul{
     list-style: none;
+    padding: 0;
 }
+
+/*img{
+    width: 100%;
+    vertical-align: middle;
+}*/
 /*header section*/
 .small-info-header{
     width: 100%;
@@ -60,6 +86,30 @@ ul{
     z-index: 1;
     height: 50px;
     background: #B45D27;
+    color: #fff;
+}
+.top-bar, .top-bar-middle{
+    width: 100%;
+    display: -webkit-box;    
+    display: -moz-box;  
+    display: -ms-flexbox; 
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.top-bar-middle .col-md-6{
+    padding: 0px;
+}
+#top-bar-right{
+ text-align: right;
+}
+.top-bar-p{
+    display: inline;
+    font-size: 14px;
+    padding-left: 10px;
 }
 .main-hero-sec{
     position: relative;
@@ -79,6 +129,9 @@ header#masthead{
 .banner-sub-bold{
     font-weight: bold;
 }
+.header-bold{
+    font-weight: bold;
+}
 .entry-header{
     display: none;
 }
@@ -95,7 +148,10 @@ header#masthead{
     //min-height: 650px;
 }
 #page-sub-header h1{
-    color: #333333 !important;
+    width: 70%;
+    color: #ffffff !important;
+    margin-top: 100px !important;
+    text-shadow: 0.5px 0.5px 5px rgba(0,0,0,0.1);
 }
 #page-sub-header p{
     display: none;
@@ -103,8 +159,80 @@ header#masthead{
 a.page-scroller{
     display: none;
 }
-
+.container-banner-button{
+    width: 100%;
+    font-size: 14px;
+}
+#banner-button{
+   background: #B45D27;
+   border: 3px solid transparent;
+   margin-top: 20px;
+   padding: 18px 30px;
+   border-radius: 10px;
+   transition: all 0.5s ease-in-out;
+}
+#banner-button:hover{
+    background: transparent;
+    border: 3px solid #B45D27;
+}
+#banner-button a{
+    color: #ffffff;
+    font-weight: 600;
+}
+/*Main Content*/
+.main-header-sec, .main-header-sec-client{
+    width: 100%;
+}
+.main-header-sec-client{
+    background: #FAFAFA;
+}
+.main-header-title{
+    color: #B45D27;
+    margin-top: 80px;
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+}
+/*Contact Form*/
+.contact-form{
+    //width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 83px;
+    background: #ffffff;
+    border-radius: 3px;
+}
+.contact-head-cl{
+    color: #B45D27;
+}
+.contact-form input, textarea{
+    width: 100%;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+}
 /*Footer*/
+footer#colophon{
+    background-color: #fafafa !important;
+    padding-bottom: 20px;
+}
+#footer-widget{
+    background-color: #fafafa !important;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+#custom_html-4{
+    padding-left: 40px;
+}
+#footer-widget p{
+    font-weight: 500;
+    color: #282a2d;
+}
+ul li a{
+    color: #282a2d;
+    font-weight: 500;
+}
 .site-info{
     text-align: center;
 }
